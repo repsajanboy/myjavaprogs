@@ -1,0 +1,47 @@
+import java.util.*;
+class ReverseArray
+{
+    public static void main(String args[])
+    {
+
+    // Create java.util.Scanner object for taking input
+    Scanner s=new Scanner(System.in);
+    
+    
+    // Take no.of elements and store it in n
+    System.out.println("Enter the no.of elements");
+    int n=s.nextInt();
+    
+    // Create array of size n
+    int a[]=new int[n];
+
+    // Read elements into the array
+    System.out.println("Enter the elements into the array");
+        for(int i=0;i<n;i++)
+        {
+        a[i]=s.nextInt();
+        }
+
+    // Reverse elements in the array
+    reverse(a);
+
+        // Print the array
+        for(int i=0;i<n;i++)
+        {
+        System.out.printf("a[%d]=%d\n",i,a[i]);
+        }
+    }
+
+    public static void reverse(int[] a)
+    {
+    
+// Loop for length/2 times only else re-swapping takes place
+        for(int i=0;i<a.length/2;i++)
+        {
+        int temp=a[i];
+        a[i]=a[(a.length-1)-i];
+        a[(a.length-1)-i]=temp;
+        }
+
+    }
+}

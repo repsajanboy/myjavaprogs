@@ -1,0 +1,36 @@
+import java.io.*;
+
+public class ReverseArray
+{
+int a [];
+ReverseArray()
+{
+a=new int [10];
+}
+
+public static void revdata(int number[])
+{
+int rev,i;
+//output data
+System.out.println("The array elements in order are:");
+for (int k=0; k<number.length;k++)
+System.out.print(number[k]+" ");
+
+rev=number[0];
+for (i=0; i<=number.length;i++)
+if (rev <number[i])
+rev=number[i];
+
+System.out.println();
+
+System.out.println("The array element reversed are:" +rev);
+}//end of method
+
+public static void main(String [] args)
+{
+int num [] = { 1,3,5,20,34,52,54,55,87,103 };
+ReverseArray a1= new ReverseArray();
+a1.revdata(num);
+}//end of main
+
+} 
